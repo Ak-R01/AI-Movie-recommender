@@ -1,4 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai"
+// require("dotenv").config()
+// const apiKey = process.env.API_KEY
 
 export default async function generateResponse(message) {
     const genAI = new GoogleGenerativeAI(
@@ -10,6 +12,5 @@ export default async function generateResponse(message) {
 
     const result = await model.generateContent(prompt)
     console.log(result.response.text())
-    const response = result.response.text()
     return result.response.text()
 }

@@ -1,9 +1,9 @@
-import logo from "./logo.svg"
+// import logo from "./logo.svg"
 import "./App.css"
-import { GoogleGenerativeAI } from "@google/generative-ai"
+// import { GoogleGenerativeAI } from "@google/generative-ai"
 // import dotenv from "dotenv"
-import Chat from "./components/Chat"
-import Background from "./components/Background"
+// import Chat from "./components/Chat"
+import Background from "./components/background"
 
 function App() {
     // dotenv.config()
