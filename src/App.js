@@ -6,7 +6,6 @@ import "./App.css"
 import Background from "./components/background"
 
 function App() {
-    console.log(process.env.REACT_APP_API_KEY)
     return (
         <>
             {/* <Chat message="PLease Onigashimas retared" name="Fuckar"></Chat> */}
