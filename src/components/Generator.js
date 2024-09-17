@@ -3,9 +3,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai"
 // const apiKey = process.env.API_KEY
 
 export default async function generateResponse(message) {
-    const genAI = new GoogleGenerativeAI(
-        "AIzaSyDf_rivYsB3TW92HumJTfZpgHk35jMkCZc"
-    )
+    const genAI = new GoogleGenerativeAI(`${process.env.REACT_APP_API_KEY}`)
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" })
 
     const prompt = `Explain ${message} in 20 words`

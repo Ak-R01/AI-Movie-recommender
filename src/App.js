@@ -6,18 +6,7 @@ import "./App.css"
 import Background from "./components/background"
 
 function App() {
-    // dotenv.config()
-    // async function onclickdo() {
-    //   const genAI = new GoogleGenerativeAI(
-    //     "AIzaSyDf_rivYsB3TW92HumJTfZpgHk35jMkCZc"
-    //   )
-    //   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" })
-
-    //   const prompt = "Write a story about a magic backpack in 50 words"
-
-    //   const result = await model.generateContent(prompt)
-    //   console.log(result.response.text())
-    // }
+    console.log(process.env.REACT_APP_API_KEY)
     return (
         <>
             {/* <Chat message="PLease Onigashimas retared" name="Fuckar"></Chat> */}
