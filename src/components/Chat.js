@@ -2,13 +2,16 @@ import React from "react"
 import "./Chatstyle.css"
 import user from "../images/user-image.png"
 import bot from "../images/Bot.jpeg"
+import "animate.css"
 
 export default function Chat(props) {
     const isUser = props.name === "User"
     const chatClass = isUser ? "userChat" : "botChat"
     if (!isUser) {
         return (
-            <div className={`chats ${chatClass}`}>
+            <div
+                className={`chats ${chatClass} animate__animated animate__fadeIn`}
+            >
                 <div className="Avatar">
                     <img src={bot} alt="User"></img>
                 </div>
@@ -24,7 +27,7 @@ export default function Chat(props) {
         )
     }
     return (
-        <div className={`chats ${chatClass}`}>
+        <div className={`chats ${chatClass} animate__animated animate__fadeIn`}>
             <div className="userInfo">
                 <div className="userName">
                     <h4>{props.name}</h4>
