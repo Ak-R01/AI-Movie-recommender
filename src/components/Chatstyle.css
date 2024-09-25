@@ -1,5 +1,7 @@
 .chats {
-    width: 400px;
+    @media screen and (min-width: 980px) {
+        width: 400px;
+    }
     background-color: #343434;
     display: flex;
     flex-direction: row;
