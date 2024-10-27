@@ -1,0 +1,33 @@
+.Movie {
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+    @media screen and (max-width: 425px) {
+        width: 200px;
+        height: 500px;
+    }
+    @media screen and (min-width: 425px) {
+        width: 300px;
+        height: 500px;
+    }
+    @media screen and (min-width: 770px) {
+        height: 500px;
+        width: 500px;
+    }
+    @media screen and (min-width: 980px) {
+        height: 800px;
+        width: 800px;
+    }
+}
+.movieContainer {
+    flex: 1;
+    margin: 2px;
+}
+h1 {
+    font-size: 20px;
+    color: cyan;
+}
+.movieContainer {
+    font-size: 16px;
+    color: white;
+}

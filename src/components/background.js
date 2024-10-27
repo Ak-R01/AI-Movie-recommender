@@ -27,10 +27,15 @@ function Background() {
         setChats([...chats, { message: input, name: "User" }])
         try {
             const response = await generateResponse(input)
+            // const textContent = response.candidates[0].content.parts[0].text
+            console.log(response)
+            // const emotionObject = JSON.parse(textContent)
+            // console.log(textContent)
+            // console.log(emotionObject)
             setChats([
                 ...chats,
                 { message: input, name: "User" },
-                { message: response, name: "Bot" },
+                { message: response.Movie_1_T, props: response , name: "Bot" },
             ])
         } catch {
             setChats([
@@ -60,6 +65,7 @@ function Background() {
                         <Chat
                             key={index}
                             message={chat.message}
+                            props = {chat.props}
                             name={chat.name}
                         />
                     ))}
