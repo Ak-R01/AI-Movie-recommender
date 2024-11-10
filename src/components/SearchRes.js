@@ -13,6 +13,7 @@ function SearchRes(props) {
     const showHulu = props.hulu
     const showHotstar = props.hotstar
 
+    
     return (
         <div className="Services">
             {showNetflix && (
