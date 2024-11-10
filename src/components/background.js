@@ -23,10 +23,12 @@ function Background() {
         if (loading) {
             return
         }
+        let message = input
+        setInput("")
         setLoading(true)
-        setChats([...chats, { message: input, name: "User" }])
+        setChats([...chats, { message: message, name: "User" }])
         try {
-            const response = await generateResponse(input)
+            const response = await generateResponse(message)
             // const textContent = response.candidates[0].content.parts[0].text
             console.log(response)
             // const emotionObject = JSON.parse(textContent)
@@ -34,20 +36,20 @@ function Background() {
             // console.log(emotionObject)
             setChats([
                 ...chats,
-                { message: input, name: "User" },
-                { message: response.Movie_1_T, props: response , name: "Bot" },
+                { message: message, name: "User" },
+                { message: response.Movie_1_T, props: response, name: "Bot" },
             ])
         } catch {
             setChats([
                 ...chats,
-                { message: input, name: "User" },
+                { message: message, name: "User" },
                 {
                     message: "Something Went Wrong! Please Try again later.",
                     name: "Bot",
                 },
             ])
         }
-        setInput("")
+
         const inputObj = document.querySelector("input")
         inputObj.value = ""
         setLoading(false)
@@ -59,13 +61,14 @@ function Background() {
     }, [chats])
     return (
         <section className="fullBackground">
+            <h1 id="headingForMood">Mood Based Movie Recommender ChatBot</h1>
             <div className="chatAreaWrapper">
                 <div className="chatArea" ref={chatAreaRef}>
                     {chats.map((chat, index) => (
                         <Chat
                             key={index}
                             message={chat.message}
-                            props = {chat.props}
+                            props={chat.props}
                             name={chat.name}
                         />
                     ))}

@@ -1,0 +1,135 @@
+#fullBackground {
+    background-color: #171717;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+#headingForSearch {
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: whitesmoke;
+}
+#headingForMood {
+    font-size: 25px;
+    color: whitesmoke;
+}
+#availInput {
+    margin-top: 100px;
+    background-color: #343434;
+    border: none;
+    color: silver;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    height: 48px;
+    width: 75%;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+img {
+    height: 100%;
+    width: 100%;
+}
+.Services div {
+    flex: 1;
+    margin: 8px 20px;
+}
+.Services {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 135px;
+    width: 75%;
+}
+
+.Services {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 135px;
+    width: 75%;
+}
+
+.service-item {
+    flex: 1;
+    margin: 8px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ensures each item maintains its size */
+}
+
+.service-item img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    flex-grow: 0; /* Prevents the images from stretching */
+}
+
+/* From Uiverse.io by Pradeepsaranbishnoi */
+.radio-button {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px;
+    position: relative;
+    align-items: center;
+    color: white;
+}
+
+.radio-button input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transform: translateZ(-25px);
+    transition: all 0.3s ease-in-out;
+}
+
+.radio::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.radio-button input[type="radio"]:checked + .radio {
+    border-color: #5cb85c;
+    transform: translateZ(0px);
+    background-color: #fff;
+}
+
+.radio-button input[type="radio"]:checked + .radio::before {
+    opacity: 1;
+}
+
+#blhe {
+    display: flex;
+    flex-direction: row;
+}
